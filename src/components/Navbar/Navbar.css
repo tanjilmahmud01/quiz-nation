@@ -1,0 +1,24 @@
+.nav-bg {
+    background-color: rgb(239, 227, 239);
+
+}
+
+.routes {
+    border: 3px solid orange;
+}
+
+.routes a {
+    text-decoration: none;
+    color: rgb(97, 44, 147);
+    font-size: 22px;
+
+    margin-right: 30px;
+
+}
+
+.routes a:hover {
+
+    color: rgb(97, 44, 147);
+
+    font-weight: 700;
+}
