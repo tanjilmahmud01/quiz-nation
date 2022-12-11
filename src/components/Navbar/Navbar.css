@@ -3,6 +3,11 @@
 
 }
 
+.title {
+    color: rgb(97, 44, 147);
+
+}
+
 .routes {
     border: 3px solid orange;
 }
