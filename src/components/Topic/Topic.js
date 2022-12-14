@@ -1,8 +1,11 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+import './Topic.css';
+
 const Topic = ({ topic }) => {
 
-    const { name, total, logo } = topic;
+    const { name, total, logo, id } = topic;
 
     console.log(name);
 
@@ -19,7 +22,7 @@ const Topic = ({ topic }) => {
     }
 
     else if (name === 'CSS') {
-        description = 'CSS is a style sheet language used for presenting a document written in HTML or XML. Find out how good you are with CSS';
+        description = 'CSS is used for presenting a document written in HTML or XML. Find out how good you are with CSS';
 
     }
 
@@ -41,6 +44,15 @@ const Topic = ({ topic }) => {
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
                         <p className="card-text">{description}</p>
+
+                        <div className='d-flex align-items-center justify-content-between'>
+                            <p className='mt-2'><small className='text-primary fw-bolder'>Total Questions: {total}</small></p>
+                            <Link to={`/quiz/${id}`}>
+                                <button className='btn btn-outline-primary'>Take Quiz</button>
+                            </Link>
+                        </div>
+
+
 
 
                     </div>

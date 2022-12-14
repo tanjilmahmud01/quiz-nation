@@ -36,7 +36,7 @@ const Topics = () => {
 
 
 
-        </div>
+        </div >
     );
 };
 

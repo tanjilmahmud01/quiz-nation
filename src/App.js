@@ -8,6 +8,7 @@ import Main from './layout/Main';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import Error from './components/Error/Error';
+import Quiz from './components/Quiz/Quiz';
 
 function App() {
 
@@ -40,9 +41,17 @@ function App() {
             path: '/blog',
             element: <Blog></Blog>
           },
+          {
+            path: '/quiz/:quizid',
+            loader: async ({ params }) => {
+              return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizid}`);
+            },
+            element: <Quiz></Quiz>
 
+          },
         ]
       },
+
       {
         path: '*',
         element: <Error></Error>
