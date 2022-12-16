@@ -1,30 +1,64 @@
-import React from 'react';
-import './Question.css'
+import React, { useState } from 'react';
+import './Question.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 
 const Question = ({ singleQuestion, questionCount }) => {
 
     const { correctAnswer, id, options, question } = singleQuestion;
 
+    const [selected, setSelected] = useState(false);
+    const [numberOfRightAnswer, setNumberOfRightAnswer] = useState(0);
+    const [numberOfWrongAnswer, setNumberOfWrongAnswer] = useState(0);
 
 
-    let numberOfRightAnswer = 0;
-    let numberOfWrongAnswer = 0;
 
-    const handleClickOption = (option) => {
+    const notify = (option) => {
         if (option === correctAnswer) {
-            console.log('correct!');
+
             showCorrectAnswerToast();
         }
         else {
-            console.log('incorrect!');
+            showIncorrectAnswerToast();
         }
+        setSelected(true);
     }
 
-    console.log(correctAnswer);
+
 
     const showCorrectAnswerToast = () => {
-        alert('hello!');
+        toast('Correct!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        })
+
     }
+    const showIncorrectAnswerToast = () => {
+        toast('Incorrect!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        })
+
+    }
+
+    console.log(numberOfRightAnswer, numberOfWrongAnswer);
+
+
 
 
 
@@ -41,18 +75,33 @@ const Question = ({ singleQuestion, questionCount }) => {
 
             <div className='container mb-5 d-flex flex-column justify-content-evenly'>
                 {
-                    options.map((option) => {
-                        return <button onClick={() => handleClickOption(option)} className='container btn option-btn mb-2 d-flex justify-content-center py-2 px-4 option-width'>
-                            {option}
-                        </button>
+                    options.map((option, idx) => {
+                        return (
+                            <div>
+                                <button key={idx} onClick={() => notify(option)} className='container btn option-btn mb-2 d-flex justify-content-center py-2 px-4 option-width'>
+                                    {option}
+                                </button>
+
+                            </div>
+                        )
+
+
                     })
                 }
+
+
+
             </div>
 
+
         </div>
+
+
 
 
     );
 };
 
 export default Question;
+
+// { () => handleClickOption(option) } 
