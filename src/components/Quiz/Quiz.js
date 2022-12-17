@@ -28,10 +28,10 @@ const Quiz = () => {
 
     return (
         <div>
-            <h2>Quiz of {name}</h2>
+            <h2 className='text-center mt-3'>Quiz of {name}</h2>
 
-            <h2>Number of correct answer: </h2>
-            <h2>Number of Incorrect answer: </h2>
+            {/* <h2>Number of correct answer: </h2>
+            <h2>Number of Incorrect answer: </h2> */}
 
             {
                 questions.map((singleQuestion) => {
