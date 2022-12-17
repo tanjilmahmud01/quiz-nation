@@ -23,7 +23,7 @@ const Statistics = () => {
 
     return (
         <div className='container border rounded mt-5'>
-            <div className='container w-75'>
+            <div className='container'>
                 <h5 className='text-center mb-3'>Number of Questions for each topic</h5>
                 <ResponsiveContainer width={'100%'} height={400}>
 
