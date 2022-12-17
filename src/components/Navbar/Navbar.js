@@ -7,7 +7,10 @@ const Navbar = () => {
         <div className='nav-bg shadow-lg'>
             <div className='container d-flex align-items-center justify-content-between '>
                 <div className='title'>
-                    <h1>Quiz Nation</h1>
+                    <Link to='/home'>
+                        <h1>Quiz Nation</h1>
+                    </Link>
+
                 </div>
                 <div className='routes'>
                     <Link to='/home'>Home</Link>

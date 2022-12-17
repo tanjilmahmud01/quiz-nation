@@ -8,9 +8,13 @@
 
 }
 
-.routes {
-    border: 3px solid orange;
+.title a {
+    text-decoration: none;
+    color: rgb(97, 44, 147);
+    ;
 }
+
+.routes {}
 
 .routes a {
     text-decoration: none;

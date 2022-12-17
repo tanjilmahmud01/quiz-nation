@@ -58,13 +58,14 @@ function App() {
             element: <Quiz></Quiz>
 
           },
+          {
+            path: '*',
+            element: <Error></Error>
+          }
         ]
       },
 
-      {
-        path: '*',
-        element: <Error></Error>
-      }
+
     ]
   );
   return (

@@ -19,7 +19,7 @@ const Topics = () => {
             <Header></Header>
 
             <div className='container'>
-                <div className='container mt-5 row row-cols-1 row-cols-md-4 border border-danger'>
+                <div className='container mt-5 row row-cols-1 row-cols-md-4 mb-5'>
                     {
 
 

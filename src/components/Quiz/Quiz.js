@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './Quiz.css'
 
 const Quiz = () => {
     const questionDetails = useLoaderData();
@@ -28,7 +29,7 @@ const Quiz = () => {
 
     return (
         <div>
-            <h2 className='text-center mt-3'>Quiz of {name}</h2>
+            <h2 className='text-center mt-3 title-text'>Quiz of {name}</h2>
 
             {/* <h2>Number of correct answer: </h2>
             <h2>Number of Incorrect answer: </h2> */}

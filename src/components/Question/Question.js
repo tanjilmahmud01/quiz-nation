@@ -33,29 +33,29 @@ const Question = ({ singleQuestion, questionCount }) => {
 
 
     const showCorrectAnswerToast = () => {
-        toast('Correct!', {
+        toast.success('Correct!', {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
             theme: "light",
-        })
+        });
 
     }
     const showCorrectAnswer = () => {
-        toast(`Correct Answer is: ${correctAnswer}`, {
+        toast.info(`Correct Answer: ${correctAnswer}`, {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
             theme: "light",
-        })
+        });
 
         setSeen(seen => !seen);
 
@@ -66,16 +66,16 @@ const Question = ({ singleQuestion, questionCount }) => {
         setSeen(seen => !seen);
     }
     const showIncorrectAnswerToast = () => {
-        toast('Incorrect!', {
+        toast.error('Incorrect!', {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 2000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
             theme: "light",
-        })
+        });
 
     }
 
