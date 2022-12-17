@@ -22,7 +22,7 @@ const Navbar = () => {
         //     </div>
         // </div>
 
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg bg-light container">
             <div className="container-fluid justify-content-center">
 
                 <div className='title navbar-brand '>
