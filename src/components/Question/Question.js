@@ -56,7 +56,7 @@ const Question = ({ singleQuestion, questionCount }) => {
 
     }
 
-    console.log(numberOfRightAnswer, numberOfWrongAnswer);
+
 
 
 
@@ -104,4 +104,3 @@ const Question = ({ singleQuestion, questionCount }) => {
 
 export default Question;
 
-// { () => handleClickOption(option) } 
